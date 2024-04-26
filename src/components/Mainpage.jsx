@@ -5,7 +5,7 @@ const Mainpage = () => {
         <>
             <div className="border-2 border-yellow-500 h-full grow">
                 <div className="border-2 border-red-500 h-[40%] w-full">
-
+                    test
                     <div className=" min-h-min w-full p-4 flex flex-row space-x-4 justify-between ">
                         <div className=" flex flex-row space-x-4 ">
                             <p className="text-base text-gray-400 font-semibold no-underline hover:text-black hover:underline ">Today</p>

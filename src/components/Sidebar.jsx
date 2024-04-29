@@ -4,7 +4,7 @@ import Logo from '../images/logo.png'
 const Sidebar = () => {
     return (
         <>
-            <div className="h-full flex-none w-80 bg-white">
+            <div className="h-full flex-none w-96 bg-white">
 
                 <div className="h-[10%] ">
                     <div className="relative top-1/4  flex justify-center ">

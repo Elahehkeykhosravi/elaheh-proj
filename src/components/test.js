@@ -91,7 +91,6 @@ function testi (){
     // man api ro balaye safe tarif mikoanm, k dar dast res bashe. 
     // ham code khaanaa tar mishe, ham editesh raahat tar mishe, ham badan yeki mikhast bebinatesh rahat bashe, va fosham nade :)
     //sahih
-    //hi
     // hello
     // fetch bedune argumente dovom, GET anjaam mide
     // amalan vaseye GET, faghat ye URL niaz dari.
@@ -115,8 +114,6 @@ function testi (){
     //taghiri nadadim ke
     // alan man CR
     //ok
-    //chie?
-    // baba koja miri 
     // aval in safaro bayad save kon bb nemikham save konm
     //hannoz safehaye dgam ok nist
     //onaram save nakardam
@@ -128,6 +125,37 @@ function testi (){
     //bb emikham ee
     //mn daram ghadam be ghadam pish miram
     // zadam o ave kardm
+    //hamin
+    // chi hamin...
+    // taaze sab shod
+    // okeye, to niaz b branche jadid nadari alan
+    // branch vase ine k bedune tars kaar koni, mese alan natarsi o save nakoni
+    // mardom az kaare asli ye branch migiran, mirinan, bad dobare barmigardan sare noghteye ghabli...
+
+
+    // to alan ino niaz nadari. 
+    //ok
+    // to faghat bad az har commit, push kon k biad 
+
+
+
+    // khodesh neveshte chikar koni
+    //oh ok fahmidam
+    //hale az farda kockicktarin karam push mikonm:)
+    // aaafaaarin, paget khoooshgel o sabz besheaaa
+    //bajeeee
+    // khob 2 ta chize dige
+    // 1. har moghe commit koni, dige natars, badan har gandi zadi, mituni bargardi aghab. engar mashine zaman dari b commit haat.
+    // 2. taghiraato mituni beyne commit ha bbini, 
+    // masalan gand zadi o ye jaa kharab shode, mituni beri bbini chia taghir kardan k baese in kharabi boode.
+    //
+    //ina ke ghermeze errrore?
+    // na, alan behet neshun midam. 
+    // ghermez ha chizaayie k az commite ghabli b in commit hazf shode
+    // sabza chizaayie k ezafe shode, bbin   bezar neshun bedam. 
+
+
+    
 
 
 

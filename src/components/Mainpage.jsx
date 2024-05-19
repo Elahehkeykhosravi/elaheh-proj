@@ -1,18 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+
+
+
 
 const Mainpage = () => {
 
+    // let daysOfTheWeek = [];
 
-    const daysOfTheWeek = [
-        { day: "SAT", LowT: 12, HighT: 15, Text: 'test1' },
-        { day: "SAT", LowT: 11, HighT: 14, Text: 'test1' },
-        { day: "SAT", LowT: 9, HighT: 16, Text: 'test1' },
-        { day: "SAT", LowT: 5, HighT: 10, Text: 'test1' },
-        { day: "SAT", LowT: 8, HighT: 17, Text: 'test1' },
-        { day: "SAT", LowT: 3, HighT: 11, Text: 'test1' },
-        { day: "SAT", LowT: 1, HighT: 5, Text: 'test1' }
+    const [daysOfTheWeek, setDaysOfWeekNow] = useState([]);
+    const [highlights, setHilightsNow] = useState( [
+        { title: "UV Index", comment: "", payload: ["5"] },
+        { title: "Wind Status", comment: "WSW", payload: ["7.70"] },
+        { title: "Sunrise & Sunset", comment: "", payload: ["6:35", "5:42"] },
+        { title: "Humidity", comment: "Normal", payload: ["12%"] },
+        { title: "Visibility", comment: "Average", payload: ["5.2 KM"] },
+        { title: "Air Quality", comment: "Unhealthy", payload: ["105"] },
+    ]  );
 
-    ]
+
+    
+
+    const eraseDaysOfWeek = () => {
+        setDaysOfWeekNow([])
+    }
+
+    const setDaysOfWeek = () => {
+        setDaysOfWeekNow(
+            [
+                { day: "Sun", LowT: 12, HighT: 15, Text: 'test1' },
+                { day: "Mon", LowT: 11, HighT: 14, Text: 'test1' },
+                { day: "Tue", LowT: 9, HighT: 16, Text: 'test1' },
+                { day: "Wed", LowT: 5, HighT: 10, Text: 'test1' },
+                { day: "Thu", LowT: 8, HighT: 17, Text: 'test1' },
+                { day: "Fri", LowT: 3, HighT: 11, Text: 'test1' },
+                { day: "Sat", LowT: 1, HighT: 5, Text: 'test1' }
+
+            ]
+        )
+    }
+
+
 
     return (
         <>
@@ -52,29 +80,51 @@ const Mainpage = () => {
                 </div>
 
                 <div className="border-2 border-green-500 p-6 grow">
+                    <button className="bg-black text-white font-bold m-1 p-1" onClick={eraseDaysOfWeek}>test</button>
+                    <button className="bg-black text-white font-bold m-1 p-1" onClick={setDaysOfWeek}>test2</button>
 
                     <div className="border-2 border-black px-0 py-0 h-full grid grid-cols-3 gap-16 grid-rows-2">
-                        <div className="border-2 border-red-500 p-2"></div>
-                        <div className="border-2 border-red-500 p-2"></div>
-                        <div className="border-2 border-red-500 p-2"></div>
+
+
+                        {highlights.map((highlight) => (
+                            <div className="border-2 border-red-500 rounded-lg bg-white shadow-lg p-4 relative flex flex-col">
+                                <p className="border-b-2 border-blue-500 text-lg text-gray-400 text-semibold flex-none">{highlight.title}</p>
+                                {highlight.payload.map((data) => (
+                                    <p className='text-3xl tracking-tight leading-tight flex-grow'>{data}</p>
+                                ))}
+                                <p className='border-t-2 border-blue-500 text-lg text-black text-bold flex-grow' >{highlight.comment}</p>
+
+                            </div>
+
+                        )
+                        )}
                     </div>
+
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
 
-
-
-
-
-
         </>
-
-
-
-
-
-
-
     )
 
 }
+
 export default Mainpage
+
+
+
+
+
+
+
+
+
+

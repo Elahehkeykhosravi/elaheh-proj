@@ -6,8 +6,8 @@ const App = () => {
   return (
     <>
     
-      <Sidebar />
-      
+      {/* <Sidebar /> */}
+      testi
      
 
     </>

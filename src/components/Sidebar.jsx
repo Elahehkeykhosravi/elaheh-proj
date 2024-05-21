@@ -12,9 +12,8 @@ const Sidebar = () => {
                     </div>
                 </div>
                 <div className="relative h-[70%] flex flex-col space-y-4 px-4">
-                    <div className="w-full h-full bg-contain bg-no-repeat bg-center mx-auto" style={{ backgroundImage: `url(${Logo})` }}>
-                        test
-                    </div>
+                    <div className="w-full h-full bg-contain bg-no-repeat bg-center mx-auto" style={{ backgroundImage: `url(${Logo})` }}></div>
+                        
 
                     <div className="flex ">
                         <p className=" text-8xl tracking-tight leading-tight ">12</p>

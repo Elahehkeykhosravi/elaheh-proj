@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../images/logo.png'
 
-const Sidebar = () => {
+export const Sidebar = () => {
     return (
         <>
             <div className="h-screen flex-none w-96 bg-white">

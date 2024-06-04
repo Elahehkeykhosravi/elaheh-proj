@@ -1,9 +1,10 @@
 import React from 'react'
 
+export function DayAndDgree() {
 
 
 
-const dayanddgree = () => {
+
     return (
 
 
@@ -11,7 +12,7 @@ const dayanddgree = () => {
 
 
 
-           [ <div className="relative border-2 border-yellow-500 h-full grow bg-gray-100 flex flex-col">
+            
 
                 <div className=" p-6 w-full min-h-min">
 
@@ -29,23 +30,20 @@ const dayanddgree = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-row space-x-3 justify-between  ">
-                    </div>
-
-
-
+                  
                 </div>
 
 
-            </div>
-           ]
+            
+           
 
 
         </>
-    );
+    )
 
-};
-export default dayanddgree()
+
+}
+export default DayAndDgree
 
 
 

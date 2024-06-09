@@ -27,10 +27,10 @@ export function Highlight ()  {
                     <div className=" px-0 py-0 h-full grid grid-cols-3 gap-16 grid-rows-2">
 
 
-                        {highlightData.map((highlight) => (
+                        {highlightData.map((highlight, index) => (
                             <div className=" rounded-lg bg-white shadow-lg p-4 relative flex flex-col">
                                 <p className=" text-lg text-gray-400 text-semibold flex-none">{highlight.title}</p>
-                                {highlight.payload.map((data) => (
+                                {highlight.payload.map((data, index) => (
                                     <p className='text-3xl tracking-tight leading-tight flex-grow'>{data}</p>
                                 ))}
                                 <p className=' text-lg text-black text-bold flex-grow' >{highlight.comment}</p>

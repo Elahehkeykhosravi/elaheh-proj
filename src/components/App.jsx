@@ -1,6 +1,7 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import { HomePage } from '../pages/HomePage'
 import { Mainpage } from '../pages/Mainpage'
+import {NotFound} from '../pages/NotFound'
 
 
 
@@ -16,7 +17,11 @@ const router = createBrowserRouter(
     
     
     <><Route path='/Mainpage' element={<Mainpage />} />
-    <Route index element={<HomePage />} /><Route /></>
+    <Route index element={<HomePage />} />
+    <Route path='*'  element={<NotFound />} />
+    
+    
+    <Route /></>
 
       )
       )

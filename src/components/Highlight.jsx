@@ -1,11 +1,13 @@
 import React from 'react'
 
 
+
+
+
+
+
+
 export function Highlight ()  {
-
-
-
-
     const highlightData = [
         { title: "UV Index", comment: "", payload: ["5"] },
         { title: "Wind Status", comment: "WSW", payload: ["7.70"] },
@@ -14,6 +16,10 @@ export function Highlight ()  {
         { title: "Visibility", comment: "Average", payload: ["5.2 KM"] },
         { title: "Air Quality", comment: "Unhealthy", payload: ["105"] }
     ]
+
+
+
+
 
 
     

@@ -85,35 +85,35 @@ export function SetDaysOfWeek() {
 
 
 
-    //const [weatherData, setWeatherData] = useState();
-    // const [Loading, setLoading] = useState(true)
+    // const [weatherData, setWeatherData] = useState();
+    const [Loading, setLoading] = useState(true)
 
 
 
-    // useEffect(() => {
-    //     const fetchWeatherData = async () => {
-    //         try {
-    //             const response = await fetch('https://api.tomorrow.io/v4/timelines?location=36.4500,51.2928&fields=temperature,weatherCode&apikey=OAUMwf91TOBEOT6lQE8Z08YXtfQuzIaT');
-    //             console.log(response);
-    //             const data = await response.json();
-    //             console.log(data);
-    //             decodeMyData(data);
-    //         } catch (error) {
-    //             console.error('Error fetching weather data:', error);
-    //         } finally {
-    //             setLoading(false);
+    useEffect(() => {
+        const fetchWeatherData = async () => {
+            try {
+                const response = await fetch('/api/timelines?location=36.4500,51.2928&fields=temperature,weatherCode&apikey=OAUMwf91TOBEOT6lQE8Z08YXtfQuzIaT');
+                console.log(response);
+                const data = await response.json();
+                console.log(data);
+                decodeMyData(data);
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+            } finally {
+                setLoading(false);
 
-    //         };
+            };
 
-    //     };
+        };
 
-    //     fetchWeatherData();
-    // }, []);
-    // {
-    //     if (Loading) {
-    //         return <div>Loading....</div>
-    //     };
-    // }
+        fetchWeatherData();
+    }, []);
+    {
+        if (Loading) {
+            return <div>Loading....</div>
+        };
+    }
 
 
 
@@ -125,7 +125,7 @@ export function SetDaysOfWeek() {
 
             {myWeek.map((day, index) => (
                 <div className={`rounded-lg h-48 flex-auto bg-white shadow-lg space-x-8`} key={index}>
-                    <div className=" text-bold text-black text-lg h-[25%]  p-2 flex justify-center border-2 border-red-500">{myWeekDay[index]}</div>
+                    <div className=" text-bold text-black text-lg h-[25%]  p-2 flex justify-center">{myWeekDay[index]}</div>
                     <div className=" h-[50%]">Text</div>
                     <div className=" flex flex-row h-[25%] p-2 justify-center space-x-2 ">
                         <p className='text-lg text-black text-semibold'>{Math.trunc(day.min)}°</p>

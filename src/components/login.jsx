@@ -39,13 +39,13 @@ export function Login() {
                   type="password"
                   placeholder="Password" />
               </div>
-              <div className="flex items-ceter justify-between">
+              <div className="transition duration-0 hover:duration-150 flex items-ceter justify-between">
                 <Link
-                  className="bg-black hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                  className="bg-black hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline  "
                   type="button" to="/Mainpage">
                   Sign In
                 </Link>
-                <Link className="font-bold text-sm text-black hover:text-yellow-400 border-2 py-2 px-4" to="/register">
+                <Link className=" font-bold text-sm text-black hover:text-yellow-400 border-2 py-2 px-4 " to="/register">
                   Forgot Password?
                 </Link>
               </div>

@@ -4,62 +4,64 @@ import { WiCloudy } from 'react-icons/wi'
 import { WiRainMix } from "react-icons/wi";
 //import { useTimezoneSelect, allTimezones } from "react-timezone-select"
 import { CiSearch } from "react-icons/ci";
-import myDataImported from './timelines.json'
+//import myDataImported from './timelines.json'
 import { useState, useEffect } from 'react'
+import { data } from 'autoprefixer';
 // import { data } from 'autoprefixer';
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 const d = new Date();
 let day = days[d.getDay()];
-console.log(day)
+//console.log(day)
 
 
 export function Sidebar() {
-    
-        //  const decodeMyData = (myDataImported) => {
-        //     let myWeekLocal = [
-        //          { temperature: 0}
-        //     ];
-        //     temperature(temperature)
+
+//     const decodeMyData = (myDataImported) => {
+//         let myWeekLocal = [
+//             { temperature: 0 }
+//         ];
+            
            
-        //     console.log(myWeekLocal)
+//             console.log(myWeekLocal)
 
 
-    let today = myDataImported.data.timelines[0].intervals[0].values.temperature
-    console.log(today)
+//     let today = myDataImported.data.timelines[0].intervals[0].values.temperature
+//     console.log(today)
+// }
+
+
+     
 
 
 
+//         const [weatherData, setWeatherData] = useState();
+//         const [Loading, setLoading] = useState(true)
 
+//         useEffect(() => {
+//             const fetchWeatherData = async () => {
+//                 try {
+//                     const response = await fetch('https://api.tomorrow.io/v4/timelines?location=40.7128,-74.0060&fields=temperature,weatherCode&apikey=OAUMwf91TOBEOT6lQE8Z08YXtfQuzIaT');
+//                     console.log(response);
+//                     const today = await response.json();
+//                     console.log(today);
+//                     decodeMyData(today);
+//                 } catch (error) {
+//                     console.error('Error fetching weather data:', error);
+//                 } finally {
+//                     setLoading(false);
 
+//                 };
 
-        const [weatherData, setWeatherData] = useState();
-        const [Loading, setLoading] = useState(true)
+//             };
 
-        useEffect(() => {
-            const fetchWeatherData = async () => {
-                try {
-                    const response = await fetch('https://api.tomorrow.io/v4/timelines?location=40.7128,-74.0060&fields=temperature,weatherCode&apikey=OAUMwf91TOBEOT6lQE8Z08YXtfQuzIaT');
-                    console.log(response);
-                    const today = await response.json();
-                    console.log(today);
-                    decodeMyData(today);
-                } catch (error) {
-                    console.error('Error fetching weather data:', error);
-                } finally {
-                    setLoading(false);
-
-                };
-
-            };
-
-            fetchWeatherData();
-        }, []);
-        {
-            if (Loading) {
-                return <div>Loading....</div>
-            };
-        }
+//             fetchWeatherData();
+//         }, []);
+//         {
+//             if (Loading) {
+//                 return <div>Loading....</div>
+//             };
+//         }
 
 
 
@@ -90,7 +92,7 @@ export function Sidebar() {
 
 
                         <div className="flex ">
-                            <p className=" text-8xl tracking-tight leading-tight ">{today}</p>
+                            <p className=" text-8xl tracking-tight leading-tight ">{}</p>
                             <p className=" text-4xl tracking-tight leading-tight pt-4">°C</p>
                         </div>
 
@@ -108,8 +110,8 @@ export function Sidebar() {
                 </div>
             </>
         )
-    }
+    
 
+}
 
-  
-    export default Sidebar
+export default Sidebar

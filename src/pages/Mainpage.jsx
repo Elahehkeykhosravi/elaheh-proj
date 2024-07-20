@@ -129,22 +129,22 @@ export const Mainpage = () => {
 
 
 
-console.log(mySideBarData)
+// console.log(mySideBarData) 
     
-  console.log(myWeek);
+  // console.log(myWeek);
 
   return (
     <>
-      {/* { <div className="flex">
-        <Sidebar />
+      { <div className="flex">
+        <Sidebar data={mySideBarData} />  
         <div className=" grow">
           <DayAndDgree />
-          <SetDaysOfWeek />
+          <SetDaysOfWeek headlines={myWeek}  />
           <Highlight />
         </div>
-      </div> } */
+      </div> }
 
-      }
+      
 
 
     </>

@@ -12,59 +12,56 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 
 const d = new Date();
 let day = days[d.getDay()];
-//console.log(day)
+console.log(day)
 
 
-export function Sidebar() {
+export function Sidebar(props) {
 
-//     const decodeMyData = (myDataImported) => {
-//         let myWeekLocal = [
-//             { temperature: 0 }
-//         ];
-            
-           
-//             console.log(myWeekLocal)
+    //     const decodeMyData = (myDataImported) => {
+    //         let myWeekLocal = [
+    //             { temperature: 0 }
+    //         ];
 
 
-//     let today = myDataImported.data.timelines[0].intervals[0].values.temperature
-//     console.log(today)
-// }
+    //             console.log(myWeekLocal)
 
 
-     
+    //     let today = myDataImported.data.timelines[0].intervals[0].values.temperature
+    //     console.log(today)
+    // }
 
 
 
-//         const [weatherData, setWeatherData] = useState();
-//         const [Loading, setLoading] = useState(true)
-
-//         useEffect(() => {
-//             const fetchWeatherData = async () => {
-//                 try {
-//                     const response = await fetch('https://api.tomorrow.io/v4/timelines?location=40.7128,-74.0060&fields=temperature,weatherCode&apikey=OAUMwf91TOBEOT6lQE8Z08YXtfQuzIaT');
-//                     console.log(response);
-//                     const today = await response.json();
-//                     console.log(today);
-//                     decodeMyData(today);
-//                 } catch (error) {
-//                     console.error('Error fetching weather data:', error);
-//                 } finally {
-//                     setLoading(false);
-
-//                 };
-
-//             };
-
-//             fetchWeatherData();
-//         }, []);
-//         {
-//             if (Loading) {
-//                 return <div>Loading....</div>
-//             };
-//         }
 
 
 
+    //         const [weatherData, setWeatherData] = useState();
+    //         const [Loading, setLoading] = useState(true)
+
+    //         useEffect(() => {
+    //             const fetchWeatherData = async () => {
+    //                 try {
+    //                     const response = await fetch('https://api.tomorrow.io/v4/timelines?location=40.7128,-74.0060&fields=temperature,weatherCode&apikey=OAUMwf91TOBEOT6lQE8Z08YXtfQuzIaT');
+    //                     console.log(response);
+    //                     const today = await response.json();
+    //                     console.log(today);
+    //                     decodeMyData(today);
+    //                 } catch (error) {
+    //                     console.error('Error fetching weather data:', error);
+    //                 } finally {
+    //                     setLoading(false);
+
+    //                 };
+
+    //             };
+
+    //             fetchWeatherData();
+    //         }, []);
+    //         {
+    //             if (Loading) {
+    //                 return <div>Loading....</div>
+    //             };
+    //         }
 
 
 
@@ -73,44 +70,58 @@ export function Sidebar() {
 
 
 
+    console.log(props.data)
+    console.log(props.data.temp)
+  
+    let timeSplitted = props.data.time.split('T');
+    let dateNow =  timeSplitted[0];
+    let clock = timeSplitted[1].split('Z')
+    let timeNow = clock[0];
+    console.log(timeNow)
+    let clockSplit = timeNow.split(':')
+    console.log(clockSplit)
+    console.log(clockSplit[0]  + ':' + clockSplit[1] )
+    let A = Math.ceil(props.data.temp)
+    console.log(A)
 
-        return (
-            <>
+    return (
+        <>
 
-                <div className="h-screen flex-none w-96 bg-white">
+            <div className="h-screen flex-none w-96 bg-white">
 
-                    <div className="h-[10%] ">
-                        <div className="relative top-1/4  flex justify-center ">
+                <div className="h-[10%] ">
+                    <div className="relative top-1/4  flex justify-center ">
 
-                            <div className="pl-3 py-1 w-3/4 bg-white text-black rounded-md shadow-lg  ">
-                                <CiSearch className='inline text-lg mb-1' /> <input type="text" placeholder="search for places..." />
-                            </div>
+                        <div className="pl-3 py-1 w-3/4 bg-white text-black rounded-md shadow-lg  ">
+                            <CiSearch className='inline text-lg mb-1' /> <input type="text" placeholder="search for places..." />
                         </div>
                     </div>
-                    <div className="relative h-[70%] flex flex-col space-y-4 px-4">
-                        <div className="w-full h-full bg-contain bg-no-repeat bg-center mx-auto" style={{ backgroundImage: `url(${Logo})` }}></div>
+                </div>
+                <div className="relative h-[70%] flex flex-col space-y-4 px-4">
+                    <div className="w-full h-full bg-contain bg-no-repeat bg-center mx-auto" style={{ backgroundImage: `url(${Logo})` }}></div>
 
-
-                        <div className="flex ">
-                            <p className=" text-8xl tracking-tight leading-tight ">{}</p>
+                    
+                        <div className="flex " > 
+                            <p className=" text-8xl tracking-tight leading-tight ">{A}</p>
                             <p className=" text-4xl tracking-tight leading-tight pt-4">°C</p>
                         </div>
+                    
 
 
-                        <div className="text-2xl text-black font-bold flex flex-row ">{day},<h1 className="text-xl font-bold text-gray-300 mt-auto"> 15:33</h1>
+                    < div className="text-2xl text-black font-bold flex flex-row " > {day + ', ' } <h1 className="text-xl font-bold text-gray-300 mt-auto">{clockSplit[0]  + ':' + clockSplit[1]} </h1>
 
-                        </div>
-
-                    </div>
-                    <div className=" h-[20%] p-4 space-y-2 ">
-                        <h1 className="text-black font-semibold  "> <WiCloudy className='inline text-lg mb-1' />Mostly cloudy</h1>
-                        <h2 className="text-black font-semibold  "> <WiRainMix className='inline text-lg mb-1' />Rain-30%</h2>
                     </div>
 
                 </div>
-            </>
-        )
-    
+                <div className=" h-[20%] p-4 space-y-2 ">
+                    <h1 className="text-black font-semibold  "> <WiCloudy className='inline text-lg mb-1' />Mostly cloudy</h1>
+                    <h2 className="text-black font-semibold  "> <WiRainMix className='inline text-lg mb-1' />Rain-30%</h2>
+                </div>
+
+            </div >
+        </>
+    )
+
 
 }
 

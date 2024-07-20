@@ -9,7 +9,7 @@ while (myLoopDay < 5) {
     const day2 = new Date();
     day2.setDate(day2.getDate() + myLoopDay);
     myWeekDay[myLoopDay] = weekday[day2.getDay()];
-    //console.log(myWeekDay[myLoopDay]);
+   // console.log(myWeekDay[myLoopDay]);
     myLoopDay++;
 };
 
@@ -20,7 +20,13 @@ while (myLoopDay < 5) {
 
 
 
-export function SetDaysOfWeek() {
+export function SetDaysOfWeek(props) {
+   
+   
+    
+   
+   
+   
     // const [myWeek, setMyWeek] = useState(
     //     [
     //         { min: 0, max: 0, avg: 0 },
@@ -114,14 +120,18 @@ export function SetDaysOfWeek() {
     // }
 
 
-
-
-
-
+           
+    
+    console.log(props.headlines)
+// {} , {} , {} .....
+// props.headlines[0].min
+// for (i = 0 ; i < 5 ; i++) { 
+// props.headlines[0].min
+//} 
     return (
         <div className='flex'>
 
-            {myWeek.map((day, index) => (
+            {props.headlines.map((day, index) => (
                 <div className={`rounded-lg h-48 flex-auto bg-white shadow-lg space-x-8`} key={index}>
                     <div className=" text-bold text-black text-lg h-[25%]  p-2 flex justify-center">{myWeekDay[index]}</div>
                     <div className=" h-[50%]">Text</div>
@@ -134,7 +144,6 @@ export function SetDaysOfWeek() {
 
         </div>
     )
-
 }
 
 
